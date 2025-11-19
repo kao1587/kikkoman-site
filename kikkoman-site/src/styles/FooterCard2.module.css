@@ -1,6 +1,6 @@
 .card {
     display: flex;
-    width: 980px;
+    width:  980px;
     height: 322px;
     justify-content: center;
     align-items: flex-start;
@@ -70,4 +70,8 @@
 
 .card:hover .card-top {
     filter: opacity(0.8);
+}
+
+@media (min-width: 768px) {
+    
 }
