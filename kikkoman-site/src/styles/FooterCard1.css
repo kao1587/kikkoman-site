@@ -1,7 +1,8 @@
 .card {
     display: flex;
-    width: 350px;
-    height: 600px;
+    max-width: 350px;
+    width: 100%;
+    height: fit-content;
     flex-direction: column;
     align-items: flex-start;
     border-radius: 0 80px 0 80px;
@@ -9,16 +10,12 @@
 
 .card-top {
     width: 100%;
-    height: 60%;
+    height: 200px;
     position: relative;
     border-radius: 0 80px 0 0;
     background-size: cover;
     background-position: center center;
     transition: all 0.3s ease;
-}
-
-.card-top img {
-    width: 100%;
 }
 
 .card-top button.arrow {
@@ -40,18 +37,20 @@
 
 .card-body {
     display: flex;
-    width: 350px;
-    height: 227px;
-    padding: 40px 50px;
+    padding: 30px 25px;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+    height: 250px;
+    width: 100%;
 }
 
 .card-body h2 {
     font-family: var(--heading-font);
     font-weight: 900;
     color: var(--primary-color);
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .card-body p {
@@ -71,13 +70,25 @@
     filter: opacity(0.8);
 }
 
+/* tablet and up */
 @media (min-width: 768px) {
     .card {
-        width: 450px;
+        width: 100%;
     }
 
     .card-body {
-        width: 450px;
-        padding: 30px 20px;
+        padding: 30px 10%;
+        height: 320px;
+    }
+}
+
+/* pc and up */
+@media (min-width: 992px) {
+    .card {
+        max-width: 350px;
+    }
+
+    .card-body {
+        height: 300px;
     }
 }
