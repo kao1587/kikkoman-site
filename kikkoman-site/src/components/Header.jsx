@@ -1,15 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Header.css';
-import KikkomanLogo from '../assets/kikkoman-logo.svg';
+import HomecookingBlogLogo from '../assets/homecook_tsushin_icon_logo.png';
 import mailIcon from '../assets/material-symbols_mail.svg';
 import cookIcon from '../assets/fluent_spatula-spoon-16-filled.svg';
 import cookHatIcon from '../assets/mdi_cook.svg';
 import { Link } from 'react-router-dom';
+import usePageScroll from '../hooks/usePageScroll';
 
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const scrollDirection = usePageScroll();
+
+  const headerClass = `
+    header-base 
+    ${scrollDirection === 'down' ? 'header-hide' : 'header-show'}
+  `;
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -38,9 +45,9 @@ function Header() {
   return (
     <div>
       {/* smartphone */}
-      <header className='container smartphone' ref={menuRef}>
+      <header className={`${headerClass}container smartphone`} ref={menuRef}>
         <div className="header-logo-btngroup">
-          <h1><Link to="home" onClick={closeMenu}><img src={KikkomanLogo} alt="Kikkoman" /></Link></h1>
+          <h1><Link to="/" onClick={closeMenu}><img src={HomecookingBlogLogo} alt="Kikkoman" /></Link></h1>
           <div className="btn-group">
             <button className='contact-btn' type='button'><img src={mailIcon} alt="mail icon" /></button>
             <button className={`hamburger-btn ${isMenuOpen ? 'close' : ''}`} type='button' onClick={toggleMenu}>
@@ -60,7 +67,7 @@ function Header() {
       </header>
       {/* pc tablet */}
       <header className='container normal'>
-        <h1><Link to="home"><img src={KikkomanLogo} alt="Kikkoman" /></Link></h1>
+        <h1><Link to="/"><img src={HomecookingBlogLogo} alt="Kikkoman" /></Link></h1>
         <div className="nav-btn-group">
           <nav>
             <ul>

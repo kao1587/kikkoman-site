@@ -1,56 +1,44 @@
 import React from 'react';
-// import '../styles/Footer.css';
+import { Link } from 'react-router-dom';
 import styles from '../styles/Footer.module.css';
-import lightBulbIcon from '../assets/solar_lightbulb-bold.svg';
-import recipeCardImg from '../assets/recipe-card-img.png';
-import submitImg from '../assets/submit-img.png';
-import homecookingImg from '../assets/kid_smile.jpeg';
-import soysauceDrip from '../assets/soysauce-drip.png';
-import tonkatsu from '../assets/tonkatsu.png';
-import tomatoPack from '../assets/tomato_pack.png';
-import soysauce from '../assets/soysauce.png';
-import milin from '../assets/milin.png';
-import soybeanMilk from '../assets/soybean-milk.png';
-import tsuyu from '../assets/tsuyu.png';
-import FooterCard1 from './FooterCard1';
-import FooterCard2 from './FooterCard2';
+import KikkomanLogo from '../assets/kikkoman-logo.svg';
 
 
 
-function Footer() {
-  return (
-    <footer className='container'>
-      <div className={styles["sp-imgGroup"]}>
-        <img className={styles['product-img']} src={tsuyu} alt="本つゆ" />
-        <img className={styles['soysauce-img']} src={soysauceDrip} alt="醤油一滴" />
-        <img className={styles['product-img']} src={tonkatsu} alt="とんかつソース" />
-        <img className={styles['soysauce-img']} src={soysauceDrip} alt="醤油一滴" />
-        <img className={styles['product-img']} src={tomatoPack} alt="カットトマト" />
-      </div>
-      <div className={styles["footer-heading"]}>
-        <h1 className={styles["h1-heading"]}>おすすめコンテンツ</h1>
-        <div className={styles["footer-heading-intro"]}>
-          <img src={lightBulbIcon} alt="電球アイコン" />
-          <p>別のページに移動、ホームクッキングトップページへ</p>
-        </div>
-      </div>
-      <div className={styles['footer-pageLinks']}>
-        <div className={styles['footer-pageLink-upper']}>
-          <FooterCard1 link={"/jitanrecipe"} imgSrc={recipeCardImg} title={<>みんなの時短料理<wbr />レシピ</>} description={"投票による「みんなの時短レシピ」ランキングと、キッコーマン社員によるリアルな時短レシピを公開しています！"} />
-          <FooterCard1 link={"/JitanrecipeSubmit"} imgSrc={submitImg} title={<>先月投稿<wbr />レシピ一覧<wbr />・投稿募集</>} description={"投稿ルールやFAQ、そして先月みんなが投稿したレシピを投票できる、コミュニティ参加の窓口です。"} />
-        </div>
+const Footer = () => {
+    return (
+        <footer>
+            <div className={styles["footerbg-top"]}>
+                <h2><Link to={"/"}><img src={KikkomanLogo} alt="Kikkoman" /></Link></h2>
+                <Link to="https://www.kikkoman.co.jp/homecook/" target='_blank'><h3>ホームクッキングトップページへ<span class="material-symbols-outlined">open_in_new</span></h3></Link>
+                <ul>
+                    <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/" target='_blank'>人気のレシピまとめ<span class="material-symbols-outlined">open_in_new</span></Link></li>
+                    <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/movie.html" target='_blank'>おすすめレシピ動画<span class="material-symbols-outlined">open_in_new</span></Link></li>
+                    {/* <li><Link to="" target='_blank'>新着レシピ<span class="material-symbols-outlined">open_in_new</span></Link></li> */}
+                    <li><Link to="https://www.kikkoman.co.jp/homecook/basic/" target='_blank'>料理の基本<span class="material-symbols-outlined">open_in_new</span></Link></li>
+                    <li><Link to="https://www.kikkoman.co.jp/homecook/season/vegetable.html" target='_blank'>旬の食材辞典<span class="material-symbols-outlined">open_in_new</span></Link></li>
+                    <li><Link to="https://www.kikkoman.co.jp/homecook/theme/event/" target='_blank'>行事イベントのレシピ<span class="material-symbols-outlined">open_in_new</span></Link></li>
+                    <li><Link to="https://www.kikkoman.co.jp/homecook/theme/kisetsu/" target='_blank'>季節の献立レシピ集<span class="material-symbols-outlined">open_in_new</span></Link></li>
+                </ul>
+                <Link to={"/jitanrecipe"}><h3>みんなの時短レシピ</h3></Link>
+                <ul>
+                    <li><Link to={"/jitanrecipe#ranking"}>時短料理レシピランキング</Link></li>
+                    <li><Link to={"/jitanrecipe#theme"}>今月のテーマ</Link></li>
+                    <li><Link to={"/jitanrecipe#staffmember-recipe"}>社員のリアル時短レシピ</Link></li>
+                </ul>
+                <Link to={"/jitanrecipeSubmit"}><h3>先月投稿レシピ一覧・投稿募集</h3></Link>
+                <ul>
+                    <li><Link to={"/jitanrecipe#recipe-vote"}>【投票】先月の時短レシピ一覧</Link></li>
+                    <li><Link to={"/jitanrecipe#submission-rule"}>投稿ルール説明・投稿</Link></li>
+                    <li><Link to={"/jitanrecipe#FAQ"}>よくある質問</Link></li>
+                </ul>
+                <p className={styles["alcohol-alert"]}>飲酒は20歳になってから。飲酒運転は法律で禁止されています。<br />妊娠中や授乳期の飲酒は胎児・乳児の発育に悪影響を与えるおそれがあります。<br />お酒は楽しく適量で。のんだあとはリサイクル。</p>
+                <small>&copy; Kikkoman Corporation</small>
+                <div className={styles["footerbg-bottom"]}></div>
+            </div>
 
-        <FooterCard2 imgSrc={homecookingImg} title={<>ホームクッキング<br />トップページへ</>} description={"定番メニューのレシピ、つくり方を写真つきでていねいに、「なぜそうするのか」をわかりやすく解説するスペシャルコンテンツです。和食の豊かさを感じてください！"} />
-      </div>
-      <div className={styles["imgGroup"]}>
-        <img className={styles['product-img']} src={soysauce} alt="本つゆ" />
-        <img className={styles['soysauce-img']} src={soysauceDrip} alt="醤油一滴" />
-        <img className={styles['product-img']} src={milin} alt="とんかつソース" />
-        <img className={styles['soysauce-img']} src={soysauceDrip} alt="醤油一滴" />
-        <img className={styles['product-img']} src={soybeanMilk} alt="カットトマト" />
-      </div>
-    </footer>
-  );
+        </footer>
+    )
 }
 
 export default Footer;

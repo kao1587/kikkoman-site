@@ -74,6 +74,7 @@
 @media (min-width: 768px) {
     .card {
         width: 100%;
+        max-width: none;
     }
 
     .card-body {
@@ -84,10 +85,6 @@
 
 /* pc and up */
 @media (min-width: 992px) {
-    .card {
-        max-width: 350px;
-    }
-
     .card-body {
         height: 300px;
     }
