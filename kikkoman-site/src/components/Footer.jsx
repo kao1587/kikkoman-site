@@ -9,9 +9,9 @@ const Footer = () => {
     return (
         <footer>
             <div className={styles["footerbg-top"]}>
-                <h2><Link to={"/"}><img src={KikkomanLogo} alt="Kikkoman" /></Link></h2>
-                <Link to="https://www.kikkoman.co.jp/homecook/" target='_blank'><h3>ホームクッキングトップページへ<span class="material-symbols-outlined">open_in_new</span></h3></Link>
-                <ul>
+                <h2 className={styles["footer-h2"]}><Link to={"/"}><img src={KikkomanLogo} alt="Kikkoman" /></Link></h2>
+                <Link to="https://www.kikkoman.co.jp/homecook/" target='_blank'><h3 className={`${styles["footer-h3"]} container`}>ホームクッキングトップ<wbr />ページへ<span class="material-symbols-outlined">open_in_new</span></h3></Link>
+                <ul className='container'>
                     <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/" target='_blank'>人気のレシピまとめ<span class="material-symbols-outlined">open_in_new</span></Link></li>
                     <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/movie.html" target='_blank'>おすすめレシピ動画<span class="material-symbols-outlined">open_in_new</span></Link></li>
                     {/* <li><Link to="" target='_blank'>新着レシピ<span class="material-symbols-outlined">open_in_new</span></Link></li> */}
@@ -20,13 +20,13 @@ const Footer = () => {
                     <li><Link to="https://www.kikkoman.co.jp/homecook/theme/event/" target='_blank'>行事イベントのレシピ<span class="material-symbols-outlined">open_in_new</span></Link></li>
                     <li><Link to="https://www.kikkoman.co.jp/homecook/theme/kisetsu/" target='_blank'>季節の献立レシピ集<span class="material-symbols-outlined">open_in_new</span></Link></li>
                 </ul>
-                <Link to={"/jitanrecipe"}><h3>みんなの時短レシピ</h3></Link>
+                <Link to={"/jitanrecipe"}><h3 className={`${styles["footer-h3"]} container`}>みんなの時短レシピ</h3></Link>
                 <ul>
                     <li><Link to={"/jitanrecipe#ranking"}>時短料理レシピランキング</Link></li>
                     <li><Link to={"/jitanrecipe#theme"}>今月のテーマ</Link></li>
                     <li><Link to={"/jitanrecipe#staffmember-recipe"}>社員のリアル時短レシピ</Link></li>
                 </ul>
-                <Link to={"/jitanrecipeSubmit"}><h3>先月投稿レシピ一覧・投稿募集</h3></Link>
+                <Link to={"/jitanrecipeSubmit"}><h3 className={`${styles["footer-h3"]} container`}>先月投稿レシピ一覧・投稿募集</h3></Link>
                 <ul>
                     <li><Link to={"/jitanrecipe#recipe-vote"}>【投票】先月の時短レシピ一覧</Link></li>
                     <li><Link to={"/jitanrecipe#submission-rule"}>投稿ルール説明・投稿</Link></li>
@@ -34,9 +34,8 @@ const Footer = () => {
                 </ul>
                 <p className={styles["alcohol-alert"]}>飲酒は20歳になってから。飲酒運転は法律で禁止されています。<br />妊娠中や授乳期の飲酒は胎児・乳児の発育に悪影響を与えるおそれがあります。<br />お酒は楽しく適量で。のんだあとはリサイクル。</p>
                 <small>&copy; Kikkoman Corporation</small>
-                <div className={styles["footerbg-bottom"]}></div>
             </div>
-
+            <div className={styles["footerbg-bottom"]}></div>
         </footer>
     )
 }

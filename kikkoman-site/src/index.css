@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: var(--text-color);
 }
 
 :root {
@@ -76,5 +77,11 @@ body {
 
   .container {
     width: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: 18px;
   }
 }
