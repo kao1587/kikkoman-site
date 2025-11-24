@@ -58,7 +58,7 @@ button.contact-btn {
     border-radius: 10px;
     display: flex;
     width: 30px;
-    height: 30px;
+    height: 100%;
     padding: 5px;
     justify-content: center;
     align-items: center;
@@ -106,6 +106,8 @@ button.close span.bar2 {
 
 nav {
     transition: max-height 0.5s ease, opacity 0.4s ease;
+    font-weight: bold;
+    color: var(--text-color);
 }
 
 nav.visible {
@@ -162,17 +164,6 @@ ul li a {
 
 /* tablet and up */
 @media (min-width: 768px) {
-    header.smartphone {
-        display: none;
-    }
-
-    header.normal {
-        display: grid;
-        grid-template-columns: 0.5fr 2fr;
-        align-items: center;
-        margin-top: 32px;
-        gap: 50px;
-    }
 
     header.normal h1 img {
         max-width: 300px;
@@ -194,15 +185,20 @@ ul li a {
         font-size: 16px;
     }
 
+    button.contact-btn span {
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
     button.contact-btn:hover {
         background-color: var(--secondary-color);
     }
 
     .nav-btn-group {
         display: inline-flex;
-        padding: 10px 35px;
+        padding: 15px 35px;
         justify-content: space-between;
-        justify-self: end;
+        justify-self: center;
         align-items: center;
         gap: 30px;
         border-radius: 20px;
@@ -233,14 +229,30 @@ ul li a {
         color: var(--primary-color);
     }
 
-    span.tablet-invisible {
-        display: none;
-    }
+
 
 }
 
 /* pc and up */
 @media (min-width: 992px) {
+    header.smartphone {
+        display: none;
+    }
+
+    header.normal {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr;
+        align-items: center;
+        margin-top: 32px;
+        gap: 50px;
+    }
+
+    span.tablet-invisible {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
     span.tablet-invisible {
         display: inline;
     }
