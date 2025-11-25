@@ -22,6 +22,7 @@
 
 .sns-icon-group-bg h2 span {
     font-family: var(--EN-text-font);
+    color: var(--primary-color);
 }
 
 .sns-icon-groups img {
@@ -46,6 +47,19 @@
     width: fit-content;
     align-items: center;
     margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.sns-icon-group img {
+    transition: all 0.3s ease;
+}
+
+.sns-icon-group:hover img{
+    opacity: 0.5;
+}
+
+.sns-icon-group:hover p{
+    text-decoration: underline;
 }
 
 .sns-icon-group p {

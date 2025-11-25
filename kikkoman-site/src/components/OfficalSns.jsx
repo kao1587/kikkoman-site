@@ -17,19 +17,19 @@ const OfficalSns = () => {
             <div className={styles["sns-icon-groups"]}>
                 <div className={styles["sns-icon-group"]} onClick={() => logoOnClick("https://page.line.me/287moyve")} >
                     <img src={lineLogo} alt="Lineロゴ" />
-                    <p>Line<span class="material-symbols-outlined">open_in_new</span></p>
+                    <p>Line<span className="material-symbols-outlined">open_in_new</span></p>
                 </div>
                 <div className={styles["sns-icon-group"]} onClick={() => logoOnClick("https://x.com/kikkoman_desu")} >
                     <img src={XLogo} alt="Xロゴ" />
-                    <p>X<span class="material-symbols-outlined">open_in_new</span></p>
+                    <p>X<span className="material-symbols-outlined">open_in_new</span></p>
                 </div>
                 <div className={styles["sns-icon-group"]} onClick={() => logoOnClick("https://www.facebook.com/kikkoman.jp")} >
                     <img src={facebookLogo} alt="Facebookロゴ" />
-                    <p>Facebook<span class="material-symbols-outlined">open_in_new</span></p>
+                    <p>Facebook<span className="material-symbols-outlined">open_in_new</span></p>
                 </div>
                 <div className={styles["sns-icon-group"]} onClick={() => logoOnClick("https://www.instagram.com/kikkoman.jp/")} >
                     <img src={instagramLogo} alt="Instagramロゴ" />
-                    <p>Instagram<span class="material-symbols-outlined">open_in_new</span></p>
+                    <p>Instagram<span className="material-symbols-outlined">open_in_new</span></p>
                 </div>
             </div>
 

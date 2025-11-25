@@ -13,14 +13,14 @@ const Footer = () => {
                 <h2 className={styles["footer-h2"]}><Link to={"/"}><img src={KikkomanLogo} alt="Kikkoman" /></Link></h2>
                 <div className={`${styles["footer-nav"]} container`}>
                     <div className={styles["footer-nav-right"]}>
-                        <Link to="https://www.kikkoman.co.jp/homecook/" target='_blank'><h3 className={`${styles["footer-h3"]} container`}>ホームクッキングトップ<wbr />ページへ<span class="material-symbols-outlined">open_in_new</span></h3></Link>
+                        <Link to="https://www.kikkoman.co.jp/homecook/" target='_blank'><h3 className={`${styles["footer-h3"]} container`}>ホームクッキングトップ<wbr />ページへ<span className="material-symbols-outlined">open_in_new</span></h3></Link>
                         <ul className={`${styles["footer-ul"]} container`}>
-                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/" target='_blank'>人気のレシピまとめ<span class="material-symbols-outlined">open_in_new</span></Link></li>
-                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/movie.html" target='_blank'>おすすめレシピ動画<span class="material-symbols-outlined">open_in_new</span></Link></li>
-                            <li><Link to="https://www.kikkoman.co.jp/homecook/basic/" target='_blank'>料理の基本<span class="material-symbols-outlined">open_in_new</span></Link></li>
-                            <li><Link to="https://www.kikkoman.co.jp/homecook/season/vegetable.html" target='_blank'>旬の食材辞典<span class="material-symbols-outlined">open_in_new</span></Link></li>
-                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/event/" target='_blank'>行事イベントのレシピ<span class="material-symbols-outlined">open_in_new</span></Link></li>
-                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/kisetsu/" target='_blank'>季節の献立レシピ集<span class="material-symbols-outlined">open_in_new</span></Link></li>
+                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/" target='_blank'>人気のレシピまとめ<span className="material-symbols-outlined">open_in_new</span></Link></li>
+                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/popular/movie.html" target='_blank'>おすすめレシピ動画<span className="material-symbols-outlined">open_in_new</span></Link></li>
+                            <li><Link to="https://www.kikkoman.co.jp/homecook/basic/" target='_blank'>料理の基本<span className="material-symbols-outlined">open_in_new</span></Link></li>
+                            <li><Link to="https://www.kikkoman.co.jp/homecook/season/vegetable.html" target='_blank'>旬の食材辞典<span className="material-symbols-outlined">open_in_new</span></Link></li>
+                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/event/" target='_blank'>行事イベントのレシピ<span className="material-symbols-outlined">open_in_new</span></Link></li>
+                            <li><Link to="https://www.kikkoman.co.jp/homecook/theme/kisetsu/" target='_blank'>季節の献立レシピ集<span className="material-symbols-outlined">open_in_new</span></Link></li>
                         </ul>
                     </div>
                     <div className={styles["footer-nav-left"]}>

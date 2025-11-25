@@ -5,10 +5,9 @@ import recipeCardImg from '../assets/recipe-card-img.png';
 import submitImg from '../assets/submit-img.png';
 import homecookingImg from '../assets/kid_smile.jpeg';
 import FooterCard1 from './FooterCard1';
-import FooterCard2 from './FooterCard2';
+import FooterCard2 from './FooterCard2.jsx';
 import OfficalSns from './OfficalSns';
 import ProductsImgGroup from './ProductsImgGroup';
-import RealFooter from './Footer';
 
 
 
