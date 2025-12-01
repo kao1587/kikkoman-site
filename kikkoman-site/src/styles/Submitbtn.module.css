@@ -15,7 +15,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.btn-show {
+.btn-sp-show {
     transform: translateY(60px);
 }
 
@@ -38,5 +38,9 @@
 
     .submit-btn:hover {
         background: var(--secondary-color);
+    }
+
+    .btn-sp-show {
+        transform: translateY(0px);
     }
 }

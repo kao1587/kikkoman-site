@@ -10,9 +10,9 @@ const slideTime = 3500;
 const TopSlideCard = () => {
     // play btn
     const [isPlaying, setIsPlaying] = useState(true);
-    const handlePlaybtn = () => {
-        setIsPlaying(prevIsPlaying => !prevIsPlaying);
-    };
+    // const handlePlaybtn = () => {
+    //     setIsPlaying(prevIsPlaying => !prevIsPlaying);
+    // };
 
     // slide btn
     const btnArray = ["", "", ""];
@@ -20,7 +20,6 @@ const TopSlideCard = () => {
 
     const handleSlideBtnClick = (index) => {
         setActiveIndex(index);
-        setIsPlaying(false);
     };
 
     useEffect(() => {
@@ -40,13 +39,13 @@ const TopSlideCard = () => {
 
     // card info
     const cardInfo = [
-        { title: "しょうがの風味が隠し味！ おろししょうゆで食べるカツレツ", tag: "ママの推しNo.1", imgSrc: tonkatsuImg },
+        { title: "しょうがの風味が隠し味！ おろししょうゆで食べるカツレツ", tag: "ランキング一位", imgSrc: tonkatsuImg },
         { title: "サーモンのガリバタしょうゆ焼き さらし新玉ねぎ添え", tag: "", imgSrc: salmonImg },
         { title: "炊き上がりの香りもごちそう！ 絶品茶飯", tag: "", imgSrc: riceEggImg }
     ];
 
     return (
-        <div>
+        <div className='container'>
             <div className={`${styles["card-list-container"]} ${styles[`active-index-${activeIndex}`]}`}>
                 {cardInfo.map((card, index) => (
                     <div style={{ backgroundImage: `url(${card.imgSrc})` }} key={index} className={`
@@ -64,11 +63,11 @@ const TopSlideCard = () => {
                     <button key={index} type='button' onClick={() => handleSlideBtnClick(index)} className={`${styles["btn"]} ${activeIndex === index ? styles["now-btn"] : ""}`}></button>
                 ))}
                 </div>
-                <button
+                {/* <button
                     type='button'
                     className={`${styles["btn"]} ${isPlaying ? styles["pause-btn"] : styles["start-btn"]}`}
                     onClick={handlePlaybtn}
-                ></button>
+                ></button> */}
             </div>
         </div>
     )

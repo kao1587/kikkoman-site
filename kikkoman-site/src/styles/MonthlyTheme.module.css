@@ -1,0 +1,41 @@
+.theme-container {
+    border-radius: 20px;
+    background: #FFF;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 8%;
+
+}
+
+h2.theme-h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+h2.theme-thisMonthTheme {
+    font-family: var(--heading-font);
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 50;
+}
+
+div.theme-dressingUnderline {
+    position: absolute;
+    bottom: 2px;
+    width: 95%;
+    height: 8px;
+    background-color: var(--secondary-color);
+    z-index: -5;
+    text-align: center;
+}
+
+p.theme-text {
+    line-height: 2;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}

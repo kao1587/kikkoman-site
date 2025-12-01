@@ -5,7 +5,7 @@ import usePageScroll from '../hooks/usePageScroll';
 const SubmitBtn = () => {
   const scrollDirection = usePageScroll();
   const btnClass = `
-    ${scrollDirection === 'down' ? styles["btn-show"] : ''}
+    ${scrollDirection === 'down' ? styles["btn-sp-show"] : ''}
   `;
   return (
     <button type='button' className={`${styles["submit-btn"]} ${btnClass} shadow`}>今すぐ<br />投稿する</button>

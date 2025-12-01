@@ -55,13 +55,13 @@ button.now-btn {
     background-color: var(--primary-color);
 }
 
-button.start-btn {
+/* button.start-btn {
     background: url("../assets/mdi_play.svg") no-repeat center;
 }
 
 button.pause-btn {
     background: url("../assets/pause.svg") no-repeat center;
-}
+} */
 
 .button-group {
     display: flex;
@@ -76,7 +76,7 @@ button.pause-btn {
     justify-content: center;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .card-list-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -106,4 +106,4 @@ button.pause-btn {
         display: block;
         opacity: 0.3;
     }
-}
+} */
