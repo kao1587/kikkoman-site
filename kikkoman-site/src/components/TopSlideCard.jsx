@@ -6,13 +6,9 @@ import riceEggImg from '../assets/rice-egg.jpg';
 
 
 const slideBtnCount = 3;
-const slideTime = 3500;
+const slideTime = 3000;
 const TopSlideCard = () => {
-    // play btn
-    const [isPlaying, setIsPlaying] = useState(true);
-    // const handlePlaybtn = () => {
-    //     setIsPlaying(prevIsPlaying => !prevIsPlaying);
-    // };
+    const isPlaying = true;
 
     // slide btn
     const btnArray = ["", "", ""];
@@ -45,7 +41,7 @@ const TopSlideCard = () => {
     ];
 
     return (
-        <div className='container'>
+        <div className={`${styles["slide-section"]} container`}>
             <div className={`${styles["card-list-container"]} ${styles[`active-index-${activeIndex}`]}`}>
                 {cardInfo.map((card, index) => (
                     <div style={{ backgroundImage: `url(${card.imgSrc})` }} key={index} className={`
@@ -63,11 +59,6 @@ const TopSlideCard = () => {
                     <button key={index} type='button' onClick={() => handleSlideBtnClick(index)} className={`${styles["btn"]} ${activeIndex === index ? styles["now-btn"] : ""}`}></button>
                 ))}
                 </div>
-                {/* <button
-                    type='button'
-                    className={`${styles["btn"]} ${isPlaying ? styles["pause-btn"] : styles["start-btn"]}`}
-                    onClick={handlePlaybtn}
-                ></button> */}
             </div>
         </div>
     )

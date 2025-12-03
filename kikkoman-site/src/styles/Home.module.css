@@ -48,10 +48,10 @@
 
 .top-everyonerecipe-preview {
     margin-top: 60px;
-    position: relative;
+    /* position: relative; */
 }
 
-.top-everyonerecipe-preview img {
+/* .top-everyonerecipe-preview img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -59,7 +59,7 @@
     left: 0;
     z-index: -1;
     object-fit: cover;
-}
+} */
 
 .top-everyonerecipe-preview h1 {
     font-family: var(--heading-font);
@@ -72,10 +72,179 @@
     margin-top: 30px;
     margin-bottom: 20px;
     line-height: 1.8;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .rank-btn {
     margin-top: 50px;
+}
+
+.rank-btn-pc {
+    display: none;
+}
+
+.happy-reason-bg {
+    background: url("../assets/top-kv-intro.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    max-width: 650px;
+    height: 650px;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.happy-reason {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    /* background: url("../assets/moms-happy-bg-sp.svg") no-repeat center top;
+    width: 100%;
+    height: 600px;
+    padding: 137px 30px;
+    margin-top: 30px;
+    border: 2px solid red; */
+}
+
+.happy-reason h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.happy-reason p {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 2.5;
+    margin-bottom: 35px;
+}
+
+.picGroup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 80px;
+    gap: 40px;
+}
+
+.picGroup img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.picGroup img:nth-of-type(2) {
+    display: none;
+}
+
+.picGroup .dashed-line1 {
+    border-radius: 150px;
+    border: 1px dashed #1E1E1E;
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: -1;
+}
+
+.picGroup .dashed-line2 {
+    border-radius: 150px;
+    border: 1px dashed #1E1E1E;
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: -50px;
+    right: 100px;
+    z-index: -1;
+    display: none;
+}
+
+.second-intro-bg {
+    background: url("../assets/orange-gradient.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-intro {
+    text-align: center;
+    line-height: 2.5;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+
+@media (min-width: 500px) {
+    .picGroup {
+        flex-direction: row;
+    }
+
+    .picGroup img {
+        width: 48%;
+    }
+}
+
+@media (min-width: 768px) {
+    .flex-section {
+        display: grid;
+        grid-template-areas:
+            "slide text"
+            "button button";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .group {
+        grid-area: text;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .group h1 {
+        text-align: left;
+    }
+
+    .group p {
+        text-align: left;
+    }
+
+    .slide-section {
+        grid-area: slide;
+    }
+
+    .flex-section button {
+        grid-area: button;
+    }
+
+    .rank-btn-pc {
+        display: inline-block;
+    }
+
+    .rank-btn-sp {
+        display: none;
+    }
+
+    .picGroup {
+        gap: 20px;
+    }
+
+    .picGroup img {
+        width: 32%;
+    }
+
+    .picGroup img:nth-of-type(2) {
+        display: block;
+    }
 }
 
 @media (min-width: 992px) {

@@ -38,7 +38,6 @@
     display: none;
 }
 
-
 button.btn {
     width: 20px;
     height: 20px;
@@ -55,14 +54,6 @@ button.now-btn {
     background-color: var(--primary-color);
 }
 
-/* button.start-btn {
-    background: url("../assets/mdi_play.svg") no-repeat center;
-}
-
-button.pause-btn {
-    background: url("../assets/pause.svg") no-repeat center;
-} */
-
 .button-group {
     display: flex;
     gap: 8px;
@@ -76,34 +67,16 @@ button.pause-btn {
     justify-content: center;
 }
 
-/* @media (min-width: 768px) {
-    .card-list-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        height: 100%;
-        transition: all 0.5s ease;
+
+@media (min-width: 768px) {
+    .card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-size: 100%;
     }
 
-    .active-index-0 {
-        grid-template-columns: 2fr 1fr 1fr;
+    .card:hover {
+        opacity: 0.7;
+        background-size: 105%;
     }
-
-    .active-index-1 {
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-
-    .active-index-2 {
-        grid-template-columns: 1fr 1fr 2fr;
-    }
-
-    .active {
-        display: block;
-        transition: all 0.5s ease;
-    }
-
-    .hidden {
-        display: block;
-        opacity: 0.3;
-    }
-} */
+}

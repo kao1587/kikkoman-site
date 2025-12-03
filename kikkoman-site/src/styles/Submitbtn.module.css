@@ -7,11 +7,12 @@
     border: none;
     color: white;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 550;
     position: fixed;
     bottom: 0px;
     right: 20px;
     z-index: 1000;
+    font-family: var(--heading-font);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -34,6 +35,19 @@
         z-index: 1000;
         right: 30px;
         transition: all 0.3s ease;
+        animation: btnAnimate 2s infinite ease;
+    }
+
+    @keyframes btnAnimate {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
     .submit-btn:hover {

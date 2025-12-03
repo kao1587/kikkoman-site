@@ -204,8 +204,7 @@ ul li a {
         border-radius: 20px;
         border: 1px solid #CDCDCD;
         background: #FFF;
-        width: fit-content;
-        max-width: 100%;
+        width: 100%;
         overflow-wrap: break-word;
     }
 
