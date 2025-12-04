@@ -45,6 +45,7 @@ h2.theme-thisMonthTheme {
     text-align: center;
     width: fit-content;
 }
+
 h2.theme-thisMonthTheme span {
     margin: 0 10px;
 }
@@ -72,6 +73,10 @@ div.theme-dressingUnderline {
 
 .theme-container button {
     margin-top: 35px;
+}
+
+.theme-container a {
+    width: 100%;
 }
 
 @media (min-width: 768px) {

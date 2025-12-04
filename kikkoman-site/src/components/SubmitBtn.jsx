@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/Submitbtn.module.css';
 import usePageScroll from '../hooks/usePageScroll';
+import { Link } from 'react-router-dom';
 
 const SubmitBtn = () => {
   const scrollDirection = usePageScroll();
@@ -8,7 +9,10 @@ const SubmitBtn = () => {
     ${scrollDirection === 'down' ? styles["btn-sp-show"] : ''}
   `;
   return (
-    <button type='button' className={`${styles["submit-btn"]} ${btnClass} shadow`}>今すぐ<br />投稿する</button>
+    <Link to="/jitanrecipeSubmit">
+      <button type='button' className={`${styles["submit-btn"]} ${btnClass} shadow`}>今すぐ<br />投稿する</button>
+    </Link>
+
   )
 }
 

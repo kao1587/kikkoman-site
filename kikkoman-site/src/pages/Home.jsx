@@ -55,7 +55,7 @@ function Home() {
         <section className={`${styles["happy-reason"]} container`}>
           <h3>ママの笑顔になる点は、<wbr />こちらから！</h3>
           <p>あなたの視点で、このレシピが<wbr />「本当に時短になったか」<wbr />「作って一番楽しかったか」<wbr />を評価してください<wbr />ぜひ、心から<wbr />「助かった」「家族が笑顔になった」<wbr />と感じたレシピに、<wbr />清き一票をお願いします。</p>
-          <button type='button' className={`button`}>投票してください</button>
+          <Link to="/jitanrecipeSubmit"><button type='button' className={`button`}>投票してください</button></Link>
         </section>
       </div>
       <section className={`${styles["picGroup"]} container`}>

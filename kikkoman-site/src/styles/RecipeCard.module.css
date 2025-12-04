@@ -1,0 +1,43 @@
+.recipe-card {
+    background-color: white;
+    width: 100%;
+    min-height: 530px;
+    height: fit-content;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.recipe-card-top {
+    background-image: url("../assets/dish-img.jpeg");
+    background-size: 180%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 330px;
+    height: 60%;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.5s ease;
+}
+
+.recipe-card:hover .recipe-card-top {
+    background-size: 190%;
+    opacity: 0.8;
+}
+
+.recipe-card-body {
+    padding: 26px 19px;
+}
+
+.recipe-card-body h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.recipe-card-body p {
+    line-height: 1.8;
+}
+
+.first-card {
+    border: 3px solid var(--primary-color);
+}

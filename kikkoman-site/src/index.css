@@ -39,6 +39,7 @@ button.button {
 
 button.button:hover {
   background: var(--secondary-color);
+  width: 100%;
 }
 
 :heading {
